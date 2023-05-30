@@ -1,0 +1,638 @@
+/* глобальні налаштування, щоб скинути всі відступи */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+/* задній фон нашої сторінки */
+body {
+    background-color: black;
+}
+
+/* загальний контейнер для наших блоків */
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    overflow-x: hidden;
+}
+
+/* налаштування шапки-навігації */
+header {
+    margin: 0px auto;
+    position: fixed;  
+    top: 0;  
+    z-index: 100;  
+    width: 100%;  
+}
+header img {
+    width: 120px;
+}
+header .container-blur {
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.33);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+}
+header .container-blur::before {
+    box-shadow: inset 0 0 2000px rgba(241, 241, 241, 0.5);
+    filter: blur(10px);
+}
+header ul {
+    max-width: 600px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0px auto;
+    padding: 20px; 
+}
+header ul a {
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+header ul a:hover {
+    color: rgb(219, 0, 0);
+    text-shadow: rgb(190, 89, 89) 1px 0 10px;
+    transition: all 300ms;
+}
+header li:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* бургер меню */
+#menu__toggle {
+    opacity: 0;
+}
+.menu__btn {
+    display: flex; 
+    align-items: center; 
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(219,0,0,1);
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 280px;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+/* головна сторінка */
+.home h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+/* анімація каруселі постерів */
+@-webkit-keyframes scroll {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
+    }
+}
+@keyframes scroll {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
+    }
+}
+.slider {
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+.slider img {
+    margin: 0px 15px;
+}
+.slider::before, .slider::after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.557) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+.slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+.slider::before {
+    left: 0;
+    top: 0;
+}
+.slider .slide-track {
+    -webkit-animation: scroll 80s linear infinite;
+    animation: scroll 80s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+
+/* переваги */
+.advantage-blocks {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: 0px auto;
+}
+.block {
+    display: block;
+    text-align: center;
+}
+.block img {
+    width: 80px;
+    height: 80px;
+}
+.block h4, p {
+    max-width: 200px;
+    text-align: center;
+}
+.text-h4 {
+    height: 60px;
+}
+.block h4 {
+    margin: 10px 0px;
+}
+.block p {
+    color: rgb(195, 195, 195);
+    font-size: 12px;
+    height: 59px;
+    margin: 10px 0px;
+}
+
+/* пристрої */
+.devices {
+    height: 530px;
+    background: rgb(3,3,3);
+    background: linear-gradient(0deg, rgba(3,3,3,1) 0%, rgba(105,13,13,1) 35%, rgba(131,16,16,1) 50%, rgba(110,13,13,1) 65%, rgba(0,0,0,1) 100%);
+    padding-top: 120px;
+    text-align: center;
+}
+.devices h3 {
+    max-width: 800px;
+    margin: 0px auto;
+}
+.devices img {
+    width: 800px;
+}
+
+/* прайс */
+.price_card {
+    max-width: 750px;
+    margin: 50px auto;
+    height: auto;
+}
+.prices {
+    display: flex;
+    justify-content: space-between;
+}
+.item {
+    display: flex;
+    justify-content: left;
+}
+.item img {
+    width: 10px;
+    height: 10px;
+    margin-top: 6px;
+}
+.item p {
+    text-align: left;
+    font-size: 14px;
+    margin: 3px 10px;
+}
+.item_grey, .img_grey {
+  opacity: 0.5;
+}
+.price_1, .price_2, .price_3 {
+    background: rgb(37,35,35);
+    background: linear-gradient(0deg, rgba(37,35,35,1) 0%, rgba(32,30,30,1) 9%, rgba(15,14,14,1) 50%, rgba(32,30,30,1) 90%, rgba(37,35,35,1) 100%);
+    border-radius: 35px;
+    border: 2px solid rgb(37,35,35);
+    padding: 30px;
+}
+.price_1:hover, .price_2:hover, .price_3:hover {
+    border: 2px solid rgba(219,0,0,1);
+    transition: all 300ms;
+}
+.plan {
+    font-weight: bold;
+    color: rgba(219,0,0,1);
+    text-transform: uppercase;
+}
+.eu {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 5px;
+}
+.month {
+    opacity: 0.3;
+    font-size: 12px;
+}
+.list_price {
+    margin-top: 20px;
+}
+.price_button {
+    text-align: center;
+    margin-top: 20px;
+}
+.price_button button {
+    background: transparent;
+    padding: 14px;
+    border-radius: 35px;
+    border: 2px solid rgba(219,0,0,1);
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 150px;
+}
+.price_button button:hover {
+    background: rgba(219,0,0,1);
+    color: white;
+    transition: all 300ms;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(219,0,0,1);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(219,0,0,1);
+    box-shadow: 0px 0px 13px 0px rgba(219,0,0,1);
+}
+
+/* питання-відповідь */
+.fag {
+    text-align: center;
+    margin-top: 100px;
+}
+.accordion {
+    background-color: #2D2D2D;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 70%;
+    font-size: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+.active, .accordion:hover {
+    background-color: #4f4e4e;
+}
+.panel {
+    background-color: #2d2d2d;
+    color: white;
+    font-size: 18px;
+    max-width: 70%;
+    margin: 0px auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-bottom: 3px solid black;
+}
+.panel p {
+    max-width: 800px;
+    text-align: left;
+    padding: 18px;
+    margin-top: 2px;
+}
+.accordion:after {
+    content: '+';
+    font-size: 25px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+    margin-top: -5px
+  }
+.active:after {
+    content: '−'; 
+}
+
+/* підвал */
+.line {
+    background: rgb(219,0,0);
+    background: linear-gradient(90deg, rgba(219,0,0,1) 0%, rgba(192,20,54,1) 32%, rgba(169,37,100,1) 56%, rgba(150,51,138,1) 71%, rgba(126,69,186,1) 89%, rgba(92,95,255,1) 100%);
+    height: 4px;
+    margin-top: 50px;
+}
+.available_on {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+.available_on p {
+    font-size: 14px;
+}
+.available_on img {
+    height: 13px;
+    margin-top: 2px;
+}
+.social {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    width: 120px;
+    margin-top: 30px;
+}
+.img_twitter {
+    margin-top: 2px;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 600px;
+    font-size: 11px;
+    opacity: 0.5;
+}
+
+/* категорії */
+.back {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 650px;
+}
+.back_1, .back_2 {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    opacity: 0.3;
+}
+.back_2:hover {
+    text-decoration: underline;
+}
+.what_watch h1 {
+    margin: 30px auto;
+    width: 600px;
+    text-align: center;
+}
+.categories {
+    width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.categories a {
+    text-decoration: none;
+    background-color: #4f4e4e;
+    padding: 15px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    width: 110px;
+    -webkit-box-shadow: 0px 0px 11px 1px rgba(117,117,117,1);
+    -moz-box-shadow: 0px 0px 11px 1px rgba(117,117,117,1);
+    box-shadow: 0px 0px 11px 1px rgba(117,117,117,1);
+}
+.categories a:hover {
+    background-color: #6a6a6a;
+}
+.categories_part1 {
+    animation: 2s show ease;
+}
+.categories_part2 {
+    animation: 3s show ease;
+}
+.categories_part3 {
+    animation: 4s show ease;
+}
+.categories_part4 {
+    animation: 5s show ease;
+}
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* карточки */
+.cards {
+    width: 750px;
+    margin: 40px auto;
+}
+.img_card {
+    height: 220px;
+    border: 2px solid rgb(35, 35, 35);
+    border-radius: 5px;
+}
+.cards_line {
+    display: flex;
+    justify-content: space-between
+}
+.card {
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.play img {
+    width: 35px;
+    border-radius: 100%;
+    border: 3px solid rgba(219,0,0,1);
+    padding: 10px;
+    opacity: 1;
+    margin-top: 10px;
+}
+.play {
+    margin-top: -220px;
+    opacity: 0;
+    padding-top: 60px;
+    padding-bottom: 75px;
+}
+.play:hover {
+    opacity: 1;
+    transition: all 300ms;
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 5px;
+}
+.myBtn_films {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* модальне вікно для підписки */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    animation: 0.3s show ease;
+    overflow-y: hidden;
+  }
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.447);
+    border-radius: 20px;
+    width: 600px; 
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: -8px;
+}
+.close:hover, .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+form {
+    text-align: center;
+}
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+input {
+    background-color: black;
+    border: none;
+}
+.input {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin-left: 63px;
+}
+.input_email {
+    background-color: rgb(57, 56, 56);
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+}
+.input_submit {
+    background-color: black;
+    border-radius: 20px;
+    border: 2px solid rgba(219,0,0,1);
+    padding: 10px;
+}
+.input_submit:hover {
+    background: rgba(219,0,0,1);
+    color: white;
+    transition: all 300ms;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(219,0,0,1);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(219,0,0,1);
+    box-shadow: 0px 0px 13px 0px rgba(219,0,0,1);
+}
+
+/* модальне вікно фільму/серіалу */
+.info_films {
+    opacity: 1;
+}
+iframe {
+    border: none;
+    width: 530px;
+    height: 275px;
+    margin-bottom: 10px;
+}
+.info_films h3 {
+    margin-top: 20px;
+    font-size: 18px;
+}
+.info_films h5 {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+    padding: 10px 40px;
+}
+.card .modal-content {
+    margin-top: 100px;
+}
+
+/* інформація про Neflix */
+.info_netflix {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.info_netflix p {
+    text-align: left;
+    max-width: 620px;
+    font-weight: 300;
+}
+.info_netflix p span {
+    font-weight: bold;
+}
+

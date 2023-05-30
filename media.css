@@ -1,0 +1,288 @@
+/* адаптація */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px
+    }
+    .accordion {
+        width: 80%;
+      }
+    .panel {
+        max-width: 80%;
+    }
+    .modal {
+        overflow-y: auto;
+      }
+}
+@media (max-width: 767px) {
+    .container {
+        max-width: none
+    }
+    header img {
+        width: 100px;
+    }
+    header ul {
+        max-width: 550px;
+    }
+    .home h1 {
+        font-size: 30px;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .advantage-blocks {
+        max-width: 550px;
+    }
+    .devices h3 {
+        max-width: 550px;
+        margin: 0px auto;
+    }
+    .devices {
+        height: 450px;
+    }
+    .devices img {
+        width: 600px;
+    }
+    .price_card {
+        max-width: 600px;
+    }
+    .item p {
+        font-size: 12px;
+    }
+    .plan {
+        font-size: 14px;
+    }
+    .eu {
+        font-size: 22px;
+    }
+    .month {
+        font-size: 10px;
+    }
+    .price_button button {
+        font-size: 13px;
+    }
+    .price_1, .price_2, .price_3 {
+        padding: 15px;
+    }
+    .modal-content {
+        width: 500px; 
+    }
+    .input_email {
+        width: 220px;
+    }
+    .input {
+        width: 370px;
+    }
+    .available_on {
+        width: 550px;
+    }
+    .available_on p {
+        font-size: 0.1px;
+        opacity: 0;
+    }
+    .info {
+        width: 550px;
+        font-size: 10.5px;
+    }
+    .back {
+        width: 600px;
+    }
+    .what_watch h1 {
+        width: 550px;
+        font-size: 30px;
+    }
+    .categories {
+        width: 550px;
+    }
+    .categories a {
+        width: 90px;
+    }
+    .cards {
+        width: 600px;
+    }
+    .img_card {
+        height: 180px;
+    }
+    .play {
+        margin-top: -190px;
+        opacity: 0;
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+    iframe {
+        width: 450px;
+        height: 180px;
+    }
+    .info_films h3 {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .info_films h5 {
+        font-size: 13px;
+    }
+    .card .modal-content {
+        margin-top: 90px;
+    }
+    .info_netflix p {
+        max-width: 550px;
+    }
+    .info_netflix h1 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 426px) {
+    .container {
+        max-width: none
+    }
+    header ul .hide {
+        opacity: 0;
+        pointer-events: none;
+        font-size: 1px;
+    }
+    header img {
+        width: 100px;
+    }
+    .menu__btn {
+        opacity: 1;
+        pointer-events: painted;
+    }
+    header .container-blur {
+        height: 70px;
+    }
+    .slide img {
+        margin: 0px 5px;
+        width: 200px;
+    }
+    .advantage-blocks {
+        display: block;
+        max-width: 300px;
+    }
+    .block h4 {
+        max-width: 250px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+    .block p {
+        height: 79px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .devices {
+        height: 330px;
+    }
+    .devices img {
+        width: 300px;
+    }
+    .price_card {
+        max-width: 300px;
+    }
+    .prices {
+        display: block;
+    }
+    .price_1, .price_2, .price_3 {
+        width: 200px;
+        margin: 20px auto;
+    }
+    .available_on {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .social {
+        margin-top: -20px;
+    }
+    .info {
+        display: block;
+        font-size: 14px;
+        width: 300px;
+    }
+    .info p {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .modal-content {
+        width: 250px; 
+        margin-top: 180px;
+    }
+    .input {
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+        margin-left: 3px;
+    }
+    .input_email {
+        background-color: rgb(57, 56, 56);
+        padding: 10px;
+        border-radius: 20px;
+        width: 110px;
+    }
+    .input_submit {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .modal {
+        overflow-y: hidden;
+    }
+    .back {
+        padding: 0 10px;
+    }
+    .info_netflix {
+        padding: 0 10px;
+    }
+    .what_watch h1 {
+        font-size: 22px;
+        width: 280px;
+    }
+    .categories {
+        width: 280px;
+        display: block;
+        margin: 0 auto;
+        
+    }
+    .categories a {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        width: 180px;
+    }
+    .back {
+        width: 300px;
+    }
+    .cards {
+        width: 300px;
+    }
+    .cards_line {
+        display: block;
+    }
+    .img_card {
+        height: 300px;
+    }
+    .play {
+        margin-top: -310px;
+        opacity: 0;
+        padding-top: 115px;
+        padding-bottom: 115px;
+        width: 220px;
+        margin-left: auto;
+        margin-right: auto;;
+    }
+    .cards .modal {
+        overflow-y: auto;
+    }
+    iframe {
+        width: 250px;
+        height: 180px;
+        margin-bottom: 5px;
+    }
+    .info_films h5 {
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+        padding: 10px 5px;
+    }
+}

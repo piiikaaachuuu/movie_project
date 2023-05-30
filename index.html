@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Netflix</title>
+    <link rel="icon" type="image/x-icon" href="img/icons8-netflix-an-american-video-on-demand-service-96.png">
+    <!-- підключаємо наші css файли -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <!-- підключаємо шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+    <!-- шапка -->
+    <header>
+        <div class="container-blur">
+            <ul>
+                <li><a href="movies.html" class="hide">Фільми</a></li>
+                <li><a href="serials.html" class="hide">Серіали</a></li>
+                <li><a href="index.html"><img src="img/netflix_logo.svg" alt=""></a></li>
+                <li><a href="#price_card" class="hide">Підписка</a></li>
+                <li ><a href="#footer" class="hide">Контакти</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+                <ul class="menu__box">
+                  <li><a class="menu__item" href="movies.html">Фільми</a></li>
+                  <li><a class="menu__item" href="serials.html">Серіали</a></li>
+                  <li><a class="menu__item" href="#price_card">Підписка</a></li>
+                  <li><a class="menu__item" href="#footer">Контакти</a></li>
+                </ul>
+              </div>
+        </div>
+    </header>
+
+    <!-- головна -->
+    <div class="home">
+        <div class="container">
+            <h1>Фільми, серіали й інший контент без обмежень</h1>
+        </div>
+        <!-- карусель -->
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="img/poster_1.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_2.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_3.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_4.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_5.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_6.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_7.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_8.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_9.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_10.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_11.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_12.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_5.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_6.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_7.jpg" alt=""/>
+                </div>
+                <div class="slide">
+                    <img src="img/poster_8.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- переваги -->
+    <div class="advantage">
+        <div class="container">
+            <div class="advantage-blocks">
+
+                <div class="block">
+                    <img src="img/icons8-скачать-64.png" alt="">
+                    <div class="text-h4">
+                        <h4>Завантажуйте контент і дивіться його офлайн</h4>
+                    </div>
+                    <div class="text-p">
+                        <p>Легко зберігайте улюблені телесеріали й фільми, щоб дивитися їх будь-коли</p>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <img src="img/icons8-блокировщик-рекламы-96.png" alt="">
+                    <div class="text-h4">
+                        <h4>Без<br>реклами</h4>
+                    </div>
+                    <div class="text-p">
+                        <p>Насолоджуйтесь переглядом фільмів/серіалів без реклами</p>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <img src="img/icons8-кирпич-90.png" alt="">
+                    <div class="text-h4">
+                        <h4>Створюйте профілі для дітей</h4>
+                    </div>
+                    <div class="text-p">
+                        <p>Ваші діти зможуть мандрувати країною фантазії разом з улюбленими персонажами в спеціальних профілях</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- пристрої -->
+    <div class="devices" >
+        <div class="container">
+            <h3>Транслюйте на всі свої улюблені пристрої в будь-який час і в будь-якому місці</h3>
+            <img src="img/devices.png" alt="">
+        </div>
+        <div class="price" id="price_card"></div>
+    </div>
+
+    <!-- прайс -->
+    <div class="price_card" >
+        <div class="container">
+            <div class="prices">
+
+                <div class="price_1">
+                    <div class="header_price">
+                        <p class="plan">Базовий</p>
+                        <p class="eu">4.99€</p>
+                        <p class="month">на місяць</p>
+                    </div>
+                    <div class="list_price">
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>480p</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>Телефон</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>Планшет</p>
+                        </div>
+                        <div class="item">
+                            <img class="img_grey" src="img/icons8-cross-96.png" alt="">
+                            <p class="item_grey">1080p</p>
+                        </div>
+                        <div class="item">
+                            <img class="img_grey" src="img/icons8-cross-96.png" alt="">
+                            <p class="item_grey">4K+HDR</p>
+                        </div>
+                        <div class="item">
+                            <img class="img_grey" src="img/icons8-cross-96.png" alt="">
+                            <p class="item_grey">Комп'ютер</p>
+                        </div>
+                        <div class="item">
+                            <img class="img_grey" src="img/icons8-cross-96.png" alt="">
+                            <p class="item_grey">Телевізор</p>
+                        </div>
+                        <div class="price_button">
+                            <button id="myBtn">Підписатись</button>
+                        </div>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <form>
+                                <label for="email">Введіть свою пошту, щоб отримати підписку:</label><br><br>
+                                <div class="input">
+                                    <input class="input_email" type="email" id="email" name="email" value="email@gmail.com"><br>
+                                    <input class="input_submit" type="submit" value="ВІДПРАВИТИ">
+                                </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price_2">
+                    <div class="header_price">
+                        <p class="plan">Стандартний</p>
+                        <p class="eu">7.49€</p>
+                        <p class="month">на місяць</p>
+                    </div>
+                    <div class="list_price">
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>480p</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>1080p</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>Телефон</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>Планшет</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>Комп'ютер</p>
+                        </div>
+                        <div class="item">
+                            <img class="img_grey" src="img/icons8-cross-96.png" alt="">
+                            <p class="item_grey">4K+HDR</p>
+                        </div>
+                        <div class="item">
+                            <img class="img_grey" src="img/icons8-cross-96.png" alt="">
+                            <p class="item_grey">Телевізор</p>
+                        </div>
+                        <div class="price_button">
+                            <button id="myBtn_2">Підписатись</button>
+                        </div>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <form>
+                                <label for="email">Введіть свою пошту, щоб отримати підписку:</label><br><br>
+                                <div class="input">
+                                    <input class="input_email" type="email" id="email" name="email" value="email@gmail.com"><br>
+                                    <input class="input_submit" type="submit" value="ВІДПРАВИТИ">
+                                </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price_3">
+                    <div class="header_price">
+                        <p class="plan">Преміум</p>
+                        <p class="eu">9.99€</p>
+                        <p class="month">на місяць</p>
+                    </div>
+                    <div class="list_price">
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>480p</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>1080p</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>4K+HDR</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>Телефон</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>Планшет</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>Комп'ютер</p>
+                        </div>
+                        <div class="item">
+                            <img src="img/icons8-галочка-512.png" alt="">
+                            <p>Телевізор</p>
+                        </div>
+                        <div class="price_button">
+                            <button id="myBtn_3">Підписатись</button>
+                        </div>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <form>
+                                <label for="email">Введіть свою пошту, щоб отримати підписку:</label><br><br>
+                                <div class="input">
+                                    <input class="input_email" type="email" id="email" name="email" value="email@gmail.com"><br>
+                                    <input class="input_submit" type="submit" value="ВІДПРАВИТИ">
+                                </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- питання-відповідь -->
+    <div class="fag">
+        <div class="container">
+            <button class="accordion">Що таке Netflix?</button>
+            <div class="panel">
+            <p>Netflix — це сервіс потокового передавання відео, що дає змогу дивитися різноманітні відзначені нагородами телесеріали, фільми, аніме, документалістику й інший контент на тисячах пристроїв із підключенням до Інтернету.
+            <br><br>
+            Ви можете дивитися скільки завгодно й коли завгодно без реклами, і все це за єдиною низькою щомісячною ціною. Ви завжди знайдете для себе щось нове. Крім того, ще більше телесеріалів і фільмів додається щотижня!</p>
+            </div>
+
+            <button class="accordion">Скільки коштує підписка Netflix?</button>
+            <div class="panel">
+            <p>Дивіться Netflix на смартфоні, планшеті, Smart TV, ноутбуці або пристрої потокової передачі за фіксованою щомісячною ціною. Плани від 4,99 EUR до 9,99 EUR на місяць. Без доплат й угод.</p>
+            </div>
+
+            <button class="accordion">Де можна дивитися контент?</button>
+            <div class="panel">
+            <p>Дивіться будь-де, будь-коли. Увійдіть у свій обліковий запис Netflix, щоб дивитися контент онлайн на сайті netflix.com з персонального комп’ютера або будь-якого пристрою з підключенням до Інтернету, на якому можна завантажити застосунок Netflix, як-от Smart TV, смартфон, планшет, медіапрогравач для потокової передачі або ігрова приставка.
+            <br><br>
+            Крім того, ви можете завантажувати улюблені серіали в застосунку для iOS, Android або Windows 10. Завантажуйте контент і дивіться його в дорозі навіть без підключення до Інтернету. Беріть Netflix із собою.</p>
+            </div>
+
+            <button class="accordion">Як скасувати підписку?</button>
+            <div class="panel">
+            <p>Netflix надає гнучкі умови. Жодних надокучливих угод чи зобов’язань. Скасувати підписку можна всього за два кліки. Жодних комісій за скасування. Оформити або скасувати підписку можна будь-коли.</p>
+            </div>
+
+            <button class="accordion">Що можна подивитись на Netflix?</button>
+            <div class="panel">
+            <p>Netflix пропонує обширну бібліотеку художніх фільмів, документалістики, телесеріалів, аніме, відзначеного нагородами оригінального контенту тощо. Дивіться скільки завгодно й коли завгодно.</p>
+            </div>
+
+            <button class="accordion">Netflix підходить для дітей?</button>
+            <div class="panel">
+            <p>Інтерфейс Netflix для дітей включено у вашу підписку. Діти можуть насолоджуватися телесеріалами й фільмами для всієї родини у своєму профілі, а батьки при цьому контролюватимуть такий контент.
+            <br><br>
+            Дитячі профілі захищаються батьківським контролем із PIN-кодом. Таким чином ви зможете ставити вікові обмеження на дитячий контент і блокувати певні найменування, щоб дитина їх не переглядала.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- підвал -->
+    <footer id="footer">
+        <div class="line"></div>
+        <div class="container">
+            <div class="available_on">
+                <p>Доступний:</p>
+                <img src="img/logo_iphone.svg" alt="" width="58px">
+                <img src="img/logo_ipad.svg" alt="" width="42px">
+                <img src="img/logo_appletv.svg" alt="" width="26px">
+                <img src="img/logo_android.svg" alt="" width="45px">
+                <img src="img/logo_androidtv.svg" alt="" width="60px">
+                <img src="img/logo_chromecast.701986e.svg" alt="" width="84px">
+                <img src="img/logo_roku.svg" alt="" width="34px">
+                <img src="img/logo_firetv.a1ae7fe.svg" alt="" width="36px">
+                <img src="img/logo_firetablet.b24ab92.svg" alt="" width="58px">
+                <img src="img/logo_samsung.5c4c08b.svg" alt="" width="58px">
+            </div>
+            <div class="social">
+                <a href="https://www.instagram.com/netflixua/"><img src="img/logo_instagram.svg" alt="" width="24px"></a>
+                <a class="img_twitter" href="https://twitter.com/netflix"><img src="img/logo_twitter.svg" alt="" width="26px"></a>
+                <a href="https://www.facebook.com/netflixua/"><img src="img/logo_facebook.svg" alt="" width="11px"></a>
+            </div>
+            <div class="info">
+                <p>©2023 Netflix</p>
+                <a href="corpinfo.html"><p>Корпоративна інформація</p></a>
+                <a href="privacy.html"><p>Положення про конфіденційність</p></a>
+                <a href="termsofuse.html"><p>Умови використання</p></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script>
+    // для блока питання-відповідь
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+    }
+
+    // модальне вікно
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn_2");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn_3");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+</script>
+</html>
